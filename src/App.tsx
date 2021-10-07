@@ -1,24 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
 function App(): JSX.Element {
+    const [formVis, setFormVis] = useState<boolean>(false);
+
+    function makeVis(): void{
+        setFormVis(true);
+    }
+
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-          Learn React
-                </a>
-            </header>
+            <button onClick={():void => makeVis()}>Show Form</button>
+            <form>
+                <input hidden={!formVis} type="text"></input>
+                <label hidden={!formVis}>Enter Label</label>
+            </form>
         </div>
     );
 }
