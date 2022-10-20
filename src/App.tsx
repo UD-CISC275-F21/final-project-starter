@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { MinusCounter } from "./MinusCounter";
 
 function App(): JSX.Element {
     return (
@@ -11,6 +12,7 @@ function App(): JSX.Element {
                 <p>
                     Edit <code>src/App.tsx</code> and save to reload.
                 </p>
+                <MinusCounter></MinusCounter>
             </header>
         </div>
     );
