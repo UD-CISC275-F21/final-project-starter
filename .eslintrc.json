@@ -36,12 +36,10 @@
             4
         ],
         "linebreak-style": [
-            "error",
-            "unix"
+            0
         ],
         "quotes": [
-            "error",
-            "double"
+            0
         ],
         "semi": [
             "error",
