@@ -1,17 +1,24 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { AddMediaPage } from "./Pages/AddMediaPage";
+import { BrowseMedia } from "./Pages/BrowseMedia";
+import { FriendsPage } from "./Pages/FriendsPage";
+import { HomePage } from "./Pages/HomePage";
+import { MyListsPage } from "./Pages/MyListsPage";
 
 function App(): JSX.Element {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                UD CIS Scheduler
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-            </header>
+        <div>
+            <p>Header will go here</p>
+            <Routes>
+                <Route path="https://talhamahmood1992.github.io/final-project-starter/">
+                    <Route index element={<HomePage />} />
+                    <Route path="friends" element={<FriendsPage />} />
+                    <Route path="mylists" element={<MyListsPage />} />
+                    <Route path="addMedia" element={<AddMediaPage />} />
+                    <Route path="browseMedia" element={<BrowseMedia />} />
+                </Route>
+            </Routes>
         </div>
     );
 }
